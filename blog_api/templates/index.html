@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog API</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			background-color: #005ea5;
+			color: #fff;
+			font-size: 36px;
+			margin: 0;
+			padding: 30px;
+			text-align: center;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		.container p {
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
+
+		.container button {
+			background-color: #005ea5;
+			border: none;
+			color: #fff;
+			cursor: pointer;
+			font-size: 18px;
+			padding: 10px 20px;
+			margin-right: 20px;
+		}
+
+		.container button:hover {
+			background-color: #002b55;
+		}
+
+		.input-group {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-top: 30px;
+		}
+
+		.input-group label {
+			font-size: 20px;
+			margin-right: 10px;
+		}
+
+		.input-group input {
+			border: 2px solid #005ea5;
+			border-radius: 5px;
+			font-size: 20px;
+			padding: 5px;
+		}
+
+		.input-group button {
+			background-color: #002b55;
+			margin-left: 20px;
+		}
+
+		.input-group button:hover {
+			background-color: #005ea5;
+		}
+	</style>
+</head>
+<body>
+	<h1>Blog API</h1>
+	<div class="container">
+		<p>Enter the ID of the post you want to Update or Delete: </p>
+		<div class="input-group">
+			<label for="post-id">Post ID:</label>
+			<input type="text" id="post-id" name="post-id" required>
+			<button onclick="window.location.href='/update/' + document.getElementById('post-id').value;">Update</button>
+		</div>
+		<div>
+			<button onclick="window.location.href='/create'">Create</button>
+			<button onclick="window.location.href='/delete/' + document.getElementById('post-id').value;">Delete</button>
+			<button onclick="window.location.href='/all'">All Posts</button>
+		</div>
+	</div>
+</body>
+</html>

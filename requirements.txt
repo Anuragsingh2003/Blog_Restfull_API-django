@@ -1,0 +1,4 @@
+Django==3.2.13
+djangorestframework==3.12.4
+django-cors-headers==3.9.0
+python-dotenv==0.19.1
